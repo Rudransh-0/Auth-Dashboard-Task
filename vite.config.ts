@@ -9,7 +9,8 @@ const siteConfiguration = {
   title: "Auth Dashboard",
   description: "Auth Dashboard",
   robots: { index: false },
-  accessibility: { addBypassLinks: false, ignoreReducedMotion: false }
+  accessibility: { addBypassLinks: false, ignoreReducedMotion: false },
+  icons: { icon: "/logo.png" }
 };
 
 // Vite config — https://vitejs.dev/config/
