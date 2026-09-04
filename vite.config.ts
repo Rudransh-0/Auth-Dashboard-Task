@@ -6,6 +6,7 @@ import path from 'node:path'
 //import siteConfiguration from './.figma/make/site.json'
 
 const siteConfiguration = {
+  title: "Auth Dashboard",
   description: "Auth Dashboard",
   robots: { index: false },
   accessibility: { addBypassLinks: false, ignoreReducedMotion: false }
