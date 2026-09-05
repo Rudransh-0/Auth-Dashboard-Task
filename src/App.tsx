@@ -706,7 +706,7 @@ function UserCard({ user, isActive, onToggle, onEdit, onDelete }: {
         <div className="sm:hidden px-4 pb-4 flex flex-col gap-3 pt-3 border-t"
           style={{ borderColor: "var(--c-divider)" }}>
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-wider mb-0.5" style={{ color: "var(--c-t2)" }}>SHA-256 Hash</p>
+            <p className="text-[10px] font-semibold uppercase tracking-wider mb-0.5" style={{ color: "var(--c-t2)" }}>Password</p>
             <p className="text-[11px] font-mono break-all leading-relaxed" style={{ color: "var(--c-t1)" }}>{user.passwordHash ?? "legacy — re-register to hash"}</p>
           </div>
           <div className="flex gap-2">
