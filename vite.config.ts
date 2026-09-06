@@ -3,14 +3,12 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'node:path'
 
-//import siteConfiguration from './.figma/make/site.json'
-
 const siteConfiguration = {
-  title: "Auth Dashboard",
-  description: "Auth Dashboard",
-  robots: { index: false },
-  accessibility: { addBypassLinks: false, ignoreReducedMotion: false },
-  icons: { icon: "/logo.png" }
+  title: "Auth Dashboard", 
+  description: "Auth Dashboard", 
+  robots: { index: false }, 
+  accessibility: { addBypassLinks: false, ignoreReducedMotion: false }, 
+  icons: { icon: "/logo.png" }  
 };
 
 // Vite config — https://vitejs.dev/config/
