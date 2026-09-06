@@ -108,14 +108,8 @@ This means data is per-browser, per-device — clearing browser storage or switc
 
 ## What I Learned
 
-*[This section is yours to finish — I've drafted a starting point below since you mentioned this was your first time building anything like a website, but only you know what actually clicked for you. Edit freely.]*
+*[To be Updated]*
 
-Going in, I had no prior experience with HTML, CSS, or JavaScript/TypeScript, so this task was as much about learning the basics as completing the assignment. Some areas I had to research and understand while building this:
-- How React manages UI state (`useState`) and re-renders components when that state changes
-- What `localStorage` is and how to read/write structured data (JSON) to it
-- How password salting and hashing work conceptually, and how to use the browser's built-in Web Crypto API (`crypto.subtle.digest`, `crypto.getRandomValues`) to implement it
-- Form validation patterns — regex for email/username rules, and giving live feedback as the user types
-- Basic responsive design differences between mobile and desktop layouts
 
 ## Known Limitations
 
