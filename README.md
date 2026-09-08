@@ -118,6 +118,46 @@ This was my first time building anything like a real website — I had no prior 
 
 **`async`/`await` in `hashPassword`.** This one didn't click immediately. `crypto.subtle.digest`(...), which actually computes the hash, doesn't return the hashed bytes right away — it returns a `Promise`, a placeholder for a value that isn't ready yet, because hashing takes a small but non-zero amount of time and JavaScript doesn't want to freeze the page while it waits. `async function hashPassword(...)` marks the function as allowed to pause internally, and `await` is the actual "wait for this to finish" instruction — it pauses just that function (not the whole app) until the Promise resolves, then hands back the real value. Any function that calls an `await`-ing function has to itself be `async` and `await` it too, which is why `handleSignup` is also `async` — it chains upward from wherever the actual waiting happens.
 
+## Screenshots
+
+**Login**
+![Login page](./screenshots/login.png)
+
+**Sign up — live password validation**
+![Signup page with password checklist](./screenshots/signup.png)
+
+**Dashboard (light mode)** — password hash revealed on hover
+![Dashboard light mode](./screenshots/dashboard-light.png)
+
+**Delete confirmation modal**
+![Delete user confirmation](./screenshots/delete-modal.png)
+
+**Edit profile (dark mode)**
+![Edit profile dark mode](./screenshots/edit-profile-dark.png)
+
+**Dashboard (dark mode)**
+![Dashboard dark mode](./screenshots/dashboard-dark.png)
+
+**Mobile view (dark mode, expanded card)**
+![Dashboard mobile view](./screenshots/dashboard-mobile.png)
+
+## Deployment
+
+Deployed on [Vercel](https://vercel.com), connected directly to this GitHub repository via Vercel's dashboard (Import Project), so every push to `main` triggers an automatic production deploy.
+
+- **Framework Preset:** Vite (auto-detected by Vercel — not set manually)
+- **Build Command:** `vite build` (default)
+- **Output Directory:** `dist` (default)
+- **Install Command:** default (pnpm/npm auto-detected)
+- **Environment variables:** none (confirmed empty in Vercel project settings)
+
+**Live link:** [auth-dashboard-task-eight.vercel.app](https://auth-dashboard-task-eight.vercel.app)
+
+To deploy your own copy:
+1. Push this repo to your own GitHub account
+2. Go to [vercel.com/new](https://vercel.com/new) and import the repository
+3. Leave all framework/build settings on their auto-detected defaults
+4. Deploy — no environment variables need to be added
 
 ## Known Limitations
 
