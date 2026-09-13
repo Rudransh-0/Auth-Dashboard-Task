@@ -809,7 +809,11 @@ function DashboardPage({ currentUser, dark, onToggleDark, onLogout, onEdit }: {
 
 // ─── ROOT ─────────────────────────────────────────────────────────────────────
 export default function App() {
-  const [page, setPage]               = useState<Page>("login");
+  const [page, setPage] = useState<Page>(() => {
+  const saved = loadCurrent();
+  const exists = saved && loadUsers().some(u => u.username === saved);
+  return exists ? "dashboard" : "login";
+  });
   const [currentUser, setCurrentUser] = useState<string>(loadCurrent() ?? "");
   const [editingUser, setEditingUser] = useState<StoredUser | null>(null);
   const [dark, setDark]               = useState<boolean>(loadDark);
